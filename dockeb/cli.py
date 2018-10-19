@@ -7,7 +7,9 @@ import qng.generator
 def _run():
     docker_args = ['docker', *sys.argv[1:]]
 
-    if docker_args[1] == 'run' and '--name' not in docker_args:
+    if (len(docker_args) > 1 and
+            docker_args[1] == 'run' and
+            '--name' not in docker_args):
         # Command is "run" and no name is explicitly
         # specified. Substitute default random name by a Queb name.
         name_generator = qng.generator.QuebNameGenerator()
