@@ -73,6 +73,8 @@ pouvez définir un alias dans la configuration de votre shell:
 .. code-block:: sh
 
    alias docker='dockeb'
+   # Pour activer l'auto-complétion si vous utilisez Zsh:
+   setopt complete_aliases
 
 Développement
 -------------
